@@ -9,7 +9,7 @@ const ProductAll = () => {
 
   const getProducts = async () => {
     let searchQuery = query.get("q") || "";
-    const url = `http://localhost:3000/products?q=${searchQuery}`;
+    const url = `https://my-json-server.typicode.com/Divjason/reactshop/products?q=${searchQuery}`;
     const response = await fetch(url);
     const data = await response.json();
     setProductList(data);
